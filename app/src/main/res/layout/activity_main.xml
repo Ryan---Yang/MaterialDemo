@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="128dp"
+        android:background="@color/color_primary"
+        android:paddingBottom="30dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="MaterialDemo"
+            android:textColor="#FFF"
+            android:textSize="25dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:padding="50dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/Rtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:textSize="17sp"
+                android:text="R"
+                android:textColor="#01579b" />
+
+            <com.example.chenhaoych.materialdemo.Slider
+                android:id="@+id/red"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#01579b"
+                materialdesign:max="255"
+                materialdesign:min="0"
+                materialdesign:showNumberIndicator="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/Gtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:textSize="17sp"
+                android:text="G"
+                android:textColor="#01579b" />
+
+            <com.example.chenhaoych.materialdemo.Slider
+                android:id="@+id/green"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#01579b"
+                materialdesign:max="255"
+                materialdesign:min="0"
+                materialdesign:showNumberIndicator="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/Btext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:textSize="17sp"
+                android:text="B"
+                android:textColor="#01579b" />
+
+            <com.example.chenhaoych.materialdemo.Slider
+                android:id="@+id/blue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#01579b"
+                materialdesign:max="255"
+                materialdesign:min="0"
+                materialdesign:showNumberIndicator="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
