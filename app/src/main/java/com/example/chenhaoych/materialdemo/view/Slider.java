@@ -1,4 +1,4 @@
-package com.example.chenhaoych.materialdemo;
+package com.example.chenhaoych.materialdemo.view;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -16,10 +16,11 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.chenhaoych.materialdemo.R;
+import com.example.chenhaoych.materialdemo.util.Utils;
 import com.nineoldandroids.view.ViewHelper;
 
 public class Slider extends CustomView {
@@ -145,7 +146,7 @@ public class Slider extends CustomView {
                         // move number indicator
                         numberIndicator.indicator.x = x;
                         numberIndicator.indicator.finalY = Utils
-                                .getRelativeTop(this) - getHeight() / 2;
+                                .getRelativeTop(this);
                         numberIndicator.indicator.finalSize = getHeight() / 2;
                         numberIndicator.numberIndicator.setText("");
                     }
@@ -285,7 +286,7 @@ public class Slider extends CustomView {
         ball = new Ball(getContext());
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(Utils.dpToPx(20,
                 getResources()), Utils.dpToPx(20, getResources()));
-        params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+        params.addRule(CENTER_VERTICAL, TRUE);
         ball.setLayoutParams(params);
         addView(ball);
 

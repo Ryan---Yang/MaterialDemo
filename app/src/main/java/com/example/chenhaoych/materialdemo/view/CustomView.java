@@ -1,4 +1,4 @@
-package com.example.chenhaoych.materialdemo;
+package com.example.chenhaoych.materialdemo.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

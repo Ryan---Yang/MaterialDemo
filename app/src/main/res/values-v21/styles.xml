@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
         <item name="android:colorPrimary">@color/color_primary</item>
         <item name="android:colorPrimaryDark">@color/color_primary</item>
         <item name="android:colorControlActivated">@color/color_accent</item>
         <item name="android:colorAccent">@color/color_accent</item>
     </style>
-
+    <style name="TitleTextStyle" parent="@android:style/TextAppearance.Holo.Large">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:shadowColor">#60000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
     <style name="DialogTheme" parent="AppTheme">
         <item name="android:colorPrimaryDark">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>

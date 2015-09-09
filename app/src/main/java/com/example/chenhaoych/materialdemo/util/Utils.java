@@ -1,4 +1,4 @@
-package com.example.chenhaoych.materialdemo;
+package com.example.chenhaoych.materialdemo.util;
 
 import android.content.res.Resources;
 import android.util.TypedValue;

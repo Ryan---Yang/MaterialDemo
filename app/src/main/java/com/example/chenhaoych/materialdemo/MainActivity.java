@@ -3,15 +3,18 @@ package com.example.chenhaoych.materialdemo;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements Slider.OnValueChangedListener {
-    int color = Color.parseColor("#01579b");
-    Slider red, green, blue;
-    TextView rt, gt, bt;
-    View headerView;
+import com.example.chenhaoych.materialdemo.view.Slider;
+
+public class MainActivity extends AppCompatActivity implements Slider.OnValueChangedListener {
+    private int color = Color.parseColor("#01579b");
+    private Slider red, green, blue;
+    private TextView rt, gt, bt;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +26,11 @@ public class MainActivity extends Activity implements Slider.OnValueChangedListe
         rt = (TextView) findViewById(R.id.Rtext);
         gt = (TextView) findViewById(R.id.Gtext);
         bt = (TextView) findViewById(R.id.Btext);
-        headerView = findViewById(R.id.head_rl);
+//        headerView = findViewById(R.id.head_rl);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextAppearance(this, R.style.TitleTextStyle);
+//        toolbar.setTitleTextColor(Color.WHITE);
 
         int r = (this.color >> 16) & 0xFF;
         int g = (this.color >> 8) & 0xFF;
@@ -41,7 +48,7 @@ public class MainActivity extends Activity implements Slider.OnValueChangedListe
     @Override
     public void onValueChanged(int value) {
         color = Color.rgb(red.getValue(), green.getValue(), blue.getValue());
-        headerView.setBackgroundColor(color);
+        toolbar.setBackgroundColor(color);
         red.setBackgroundColor(color);
         green.setBackgroundColor(color);
         blue.setBackgroundColor(color);
